@@ -25,10 +25,10 @@ jobs:
 
       - name: Build Docker image
         run: |
-          IMAGE_NAME=ghcr.io/${{ github.repository_owner }}/nextjs-app
-          docker build -t $IMAGE_NAME .
+          IMAGE_NAME=ghcr.io/${{ github.repository_owner }}/jopatdev
+          docker build -t $IMAGE_NAME src
 
       - name: Push Docker image
         run: |
-          IMAGE_NAME=ghcr.io/${{ github.repository_owner }}/nextjs-app
+          IMAGE_NAME=ghcr.io/${{ github.repository_owner }}/jopatdev
           docker push $IMAGE_NAME
