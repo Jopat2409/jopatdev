@@ -69,7 +69,24 @@ export default function AllTheMaps(){
                                     singleValue: (base) => ({
                                         ...base,
                                         color: "#6FD3ED",
-                                    })}}
+                                    }),
+                                    input: (base) => ({
+                                        ...base,
+                                        color: "#6FD3ED",
+                                    }),
+                                    menu: (base) => ({
+                                        ...base,
+                                        borderWidth: 1,
+                                        backgroundColor: "#2C6476",
+                                        borderColor: "#34A0C8",
+                                        borderRadius: 0,
+                                    }),
+                                    option: (base, state) => ({
+                                        ...base,
+                                        backgroundColor: state.isFocused ? '#e0e0e0' : 'none',
+                                        color: "#6FD3ED"
+                                    }),
+                                }}
                                 components={{ DropdownIndicator: () => null, IndicatorSeparator: () => null }}
                             />
 
