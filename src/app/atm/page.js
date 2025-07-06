@@ -35,11 +35,11 @@ export default function AllTheMaps(){
             <div className="flex-1 bg-[#153238] opacity-90 border-4 border-[#395A63]">
                 <div className="w-full h-full flex flex-col flex-wrap">
                     <div className="h-[5%] bg-[#0F232A] opacity-90 w-fit px-5 text-[#95E2F2] border-r-3 border-[#395A63] flex items-center justify-end">
-                        The Center
+                        THE CENTER
                     </div>
                     <div className="flex-1 bg-[#0F232A] opacity-90 border-t-4 border-[#395A63] flex flex-col items-center p-[2.5%] lg:flex-row">
                         <div className="w-[97.5%] aspect-square">
-                            <LazyMap map={"The Center"} currentDino={selectedDino}/>
+                            <LazyMap map={"The Center"} currentDino={selectedDino.label}/>
                         </div>
                         <div className="flex flex-row w-full justify-around my-2.5">
                             <button
@@ -59,7 +59,7 @@ export default function AllTheMaps(){
                             <Select
                                 options={tab == "creatures" ? dinos : GameData["Resources"]}
                                 value={selectedDino}
-                                onChange={(v) => setSelectedDino(v.label)}
+                                onChange={setSelectedDino}
                                 isSearchable
                                 styles ={{
                                     control: (base) => ({
@@ -68,6 +68,7 @@ export default function AllTheMaps(){
                                         borderColor: "#34A0C8",
                                         borderRadius: 0,
                                         fontSize: "20px",
+                                        fontFamily: "arial",
                                         boxShadow: "none",
                                         "&:hover": {
                                             borderColor: "#94a3b8",
@@ -89,8 +90,16 @@ export default function AllTheMaps(){
                                     }),
                                     option: (base, state) => ({
                                         ...base,
-                                        backgroundColor: state.isFocused ? '#e0e0e0' : 'none',
-                                        color: "#6FD3ED"
+                                        backgroundColor: state.isSelected ? "#DDA100" : state.isFocused ? '#3E7B91' : "none",
+                                        borderWidth: state.isSelected ? 1 : 0,
+                                        borderStyle: "dashed",
+                                        borderColor: "#D98100",
+                                        color: state.isSelected ? "#7AE4FD" : "#6FD3ED",
+                                        paddingTop: 0,
+                                        paddingBottom: 0,
+                                        paddingLeft: 5,
+                                        paddingRight: 5,
+                                        fontFamily: "arial"
                                     }),
                                 }}
                                 components={{ DropdownIndicator: () => null, IndicatorSeparator: () => null }}
