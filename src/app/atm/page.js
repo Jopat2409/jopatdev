@@ -12,6 +12,7 @@ export default function AllTheMaps(){
     const [tab, setTab] = useState("creatures")
 
     const [selectedDino, setSelectedDino] = useState("")
+    const [opened, setOpened] = useState(false)
 
     const [mounted, setMounted] = useState(false);
 
@@ -31,10 +32,10 @@ export default function AllTheMaps(){
                     <div className="h-[5%] bg-[#0F232A] opacity-90 w-fit px-5 text-[#95E2F2] border-r-3 border-[#395A63] flex items-center justify-end">
                         The Center
                     </div>
-                    <div className="flex-1 bg-[#0F232A] opacity-90 border-t-4 border-[#395A63] flex flex-col items-center p-[5%] lg:flex-row">
-                        <div className="w-[95%] aspect-square bg-amber-50">
+                    <div className="flex-1 bg-[#0F232A] opacity-90 border-t-4 border-[#395A63] flex flex-col items-center p-[2.5%] lg:flex-row">
+                        <div className="w-[97.5%] aspect-square bg-amber-50">
                         </div>
-                        <div className="flex flex-row w-full justify-around mt-5 pb-5">
+                        <div className="flex flex-row w-full justify-around my-2.5">
                             <button
                                 className={`text-[#8FBDCD] font-light text-3xl cursor-pointer ${tab == "creatures" ? "opacity-100" : "opacity-50"}`}
                                 onClick={() => setTab("creatures")}
@@ -64,20 +65,19 @@ export default function AllTheMaps(){
                                         boxShadow: "none",
                                         "&:hover": {
                                             borderColor: "#94a3b8",
-                                        },
+                                        }}),
                                     singleValue: (base) => ({
                                         ...base,
                                         color: "#6FD3ED",
-                                    }),
-                                })}}
+                                    })}}
                                 components={{ DropdownIndicator: () => null, IndicatorSeparator: () => null }}
                             />
 
                             {/* Custom Filter Icon */}
-                            <div className="absolute right-2 top-2">
-                                    <button className="p-1 rounded hover:bg-gray-200">
-                                    <IconAdjustments size={18} />
-                                    </button>
+                            <div className="absolute right-1 top-1">
+                                <button className="p-1 rounded hover:bg-gray-200 hover:cursor-pointer">
+                                    <IconAdjustments size={28} color="#6FD3ED" />
+                                </button>
                             </div>
                         </div>
                     </div>
