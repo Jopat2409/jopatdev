@@ -1,0 +1,13 @@
+.ark-tooltip {
+    background-color: rgba(44,100,118,1) !important;
+    color: rgb(111, 211, 237) !important;
+    border-color: rgb(52, 160, 200);
+    border-radius: 0;
+}
+
+.leaflet-tooltip-top:before,
+.leaflet-tooltip-bottom:before,
+.leaflet-tooltip-left:before,
+.leaflet-tooltip-right:before {
+    border: none !important;
+}

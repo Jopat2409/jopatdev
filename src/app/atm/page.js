@@ -4,6 +4,11 @@ import Select from 'react-select'
 
 import GameData from "@/data/mapdata.json"
 import { IconAdjustments } from "@tabler/icons-react"
+import dynamic from "next/dynamic"
+
+const LazyMap = dynamic(() => import("@/components/Map"), {
+    ssr: false,
+});
 
 export default function AllTheMaps(){
 
@@ -33,7 +38,8 @@ export default function AllTheMaps(){
                         The Center
                     </div>
                     <div className="flex-1 bg-[#0F232A] opacity-90 border-t-4 border-[#395A63] flex flex-col items-center p-[2.5%] lg:flex-row">
-                        <div className="w-[97.5%] aspect-square bg-amber-50">
+                        <div className="w-[97.5%] aspect-square">
+                            <LazyMap map={"The Center"} currentDino={selectedDino}/>
                         </div>
                         <div className="flex flex-row w-full justify-around my-2.5">
                             <button
