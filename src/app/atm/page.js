@@ -59,7 +59,7 @@ export default function AllTheMaps(){
                             <Select
                                 options={tab == "creatures" ? dinos : GameData["Resources"]}
                                 value={selectedDino}
-                                onChange={setSelectedDino}
+                                onChange={(v) => setSelectedDino(v.label)}
                                 isSearchable
                                 styles ={{
                                     control: (base) => ({

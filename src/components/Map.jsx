@@ -1,6 +1,4 @@
 "use client";
-
-// IMPORTANT: the order matters!
 import "leaflet/dist/leaflet.css";
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
 import "leaflet-defaulticon-compatibility";
@@ -15,6 +13,10 @@ import SpawnArea from "./SpawnBound";
 const SetViewToBounds = ({bounds}) => {
     const map = useMap();
     bounds = latLngBounds(bounds);
+
+    map.on("resize", () => {
+        map.fitBounds(bounds);
+    })
 
     useEffect(() => {
         map.fitBounds(bounds);
@@ -38,7 +40,6 @@ export default function Map({map, currentDino = "Lightning Wyvern", mapWidth = n
     const data = GameData["Maps"][map] || null
 
     const [bounds, setBounds] = useState(null)
-
 
     useEffect(() => {
         const img = new Image();
@@ -80,7 +81,7 @@ export default function Map({map, currentDino = "Lightning Wyvern", mapWidth = n
             <SetViewToBounds bounds={bounds}/>
             {(data["dino-spawns"][currentDino] || []).map((spawnContainer, cIndex) => (
                 data["spawn-containers"][spawnContainer]["bounds"].map((bound, bIndex) => {
-                    return <SpawnArea key={`Bound${cIndex}${bIndex}`} bounds={normalizeBound(bound, sideLength)} container={spawnContainer} entryWeight={data["spawn-containers"][spawnContainer]["entries"][currentDino]["entry-weight"]}/>
+                    return <SpawnArea key={`Bound${cIndex}${bIndex}`} bounds={normalizeBound(bound, bounds[1][0])} container={spawnContainer} entryWeight={data["spawn-containers"][spawnContainer]["entries"][currentDino]["entry-weight"]}/>
                 })
             ))}
         </MapContainer>
