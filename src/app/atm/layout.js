@@ -6,7 +6,7 @@ const anton = Anton({subsets: ['latin'], weight: '400'})
 export default function ATMLayout({children}){
 
     return (
-        <div className={"flex flex-row w-screen h-screen " + anton.className}>
+        <div className={"flex flex-row w-screen h-screen bg-[url(@/public/turtle.png)] " + anton.className}>
             {children}
         </div>
     )
