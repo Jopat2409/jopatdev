@@ -32,7 +32,7 @@ export default function AllTheMaps(){
         <>
             <div className="hidden bg-[#1B2838] w-[15vw] h-[100vh] min-w-52 md:flex">
             </div>
-            <div className="flex-1 bg-[#153238] opacity-90 border-4 border-[#395A63]">
+            <div className="flex-1 bg-[#153238] opacity-90 border-1 border-[#395A63]">
                 <div className="w-full h-full flex flex-col flex-wrap">
                     <div className="h-[5%] bg-[#0F232A] opacity-90 w-fit px-5 text-[#95E2F2] border-r-3 border-[#395A63] flex items-center justify-end">
                         THE CENTER
