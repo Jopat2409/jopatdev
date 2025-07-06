@@ -14,6 +14,8 @@ export default function AllTheMaps(){
 
     const dinos = useMemo(() => GameData["Dinos"].reduce((o, key) => ([ ...o, {value: key.toLowerCase().replace(" ", "_"), label: key}]), []))
 
+    const [map, setMap] = useState({value: "the_center", label: "The Center"})
+
     const [tab, setTab] = useState("creatures")
 
     const [selectedDino, setSelectedDino] = useState("")
@@ -32,12 +34,49 @@ export default function AllTheMaps(){
         <>
             <div className="hidden bg-[#1B2838] w-[15vw] h-[100vh] min-w-52 md:flex">
             </div>
-            <div className="flex-1 bg-[#153238] opacity-90 border-1 border-[#395A63]">
-                <div className="w-full h-full flex flex-col flex-wrap">
-                    <div className="h-[5%] bg-[#0F232A] opacity-90 w-fit px-5 text-[#95E2F2] border-r-3 border-[#395A63] flex items-center justify-end">
-                        THE CENTER
-                    </div>
-                    <div className="flex-1 bg-[#0F232A] opacity-90 border-t-4 border-[#395A63] flex flex-col items-center p-[2.5%] lg:flex-row">
+            <div className="flex-1 bg-[#0F232A] opacity-90 border-1 border-[#395A63]">
+                <div className="w-full h-full flex flex-col flex-wrap items-center">
+                    <Select
+                        placeholder="Select Map"
+                        value={map}
+                        onChange={setMap}
+                        isSearchable={false}
+                        styles={{
+                            container: (base) => ({
+                                ...base,
+                                width: "fit-content",
+                                padding: 0,
+                            }),
+                            singleValueContainer: (base) => ({
+                                ...base,
+                                padding: 0
+                            }),
+                            control: (base) => ({
+                                ...base,
+                                backgroundColor: "none",
+                                border: "none",
+                                padding: 0,
+                                boxShadow: 'none'
+                            }),
+                            singleValue: (base) => ({
+                                ...base,
+                                color: "#8FBDCD",
+                                fontSize: "1.875rem",
+                                margin: 0
+                            }),
+                            input: (base) => ({
+                                ...base,
+                                color: "#8FBDCD",
+                            }),
+                            dropdownIndicator: (base) => ({
+                                ...base,
+                                padding: 0,
+                                color: "#8FBDCD"
+                            })
+                        }}
+                        components={{ IndicatorSeparator: () => null }}
+                    />
+                    <div className="flex-1 opacity-90 flex flex-col items-center lg:flex-row">
                         <div className="w-[97.5%] aspect-square">
                             <LazyMap map={"The Center"} currentDino={selectedDino.label}/>
                         </div>
@@ -57,6 +96,7 @@ export default function AllTheMaps(){
                         </div>
                         <div className="relative w-80">
                             <Select
+                                placeholder={"Select creature"}
                                 options={tab == "creatures" ? dinos : GameData["Resources"]}
                                 value={selectedDino}
                                 onChange={setSelectedDino}
@@ -71,7 +111,8 @@ export default function AllTheMaps(){
                                         fontFamily: "arial",
                                         boxShadow: "none",
                                         "&:hover": {
-                                            borderColor: "#94a3b8",
+                                            borderColor: "#78DEFA",
+                                            backgroundColor: "#426570"
                                         }}),
                                     singleValue: (base) => ({
                                         ...base,
