@@ -1,7 +1,7 @@
 
 
-export function className(df, md="", lg=""){
-    return `${df}` + md ? ` md:${md}` : "" + lg ? ` lg:${lg}` : ""
+export function className({df, md="", lg=""}){
+    return `${df}` + (md ? ` md:${md}` : "") + (lg ? ` lg:${lg}` : "")
 }
 
 export function hiddenAt({className="", breakpoint="md"}){
@@ -9,5 +9,5 @@ export function hiddenAt({className="", breakpoint="md"}){
 }
 
 export function shownAt({className="", breakpoint="md"}){
-    return (className ? `${className} ` : "") + `invisible ${breakpoint}:visible`
+    return (className ? `${className} ` : "") + `hidden ${breakpoint}:!block`
 }
