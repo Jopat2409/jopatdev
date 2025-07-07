@@ -10,7 +10,7 @@ const ForwardRectangle = forwardRef((props, ref) => (
 ));
 ForwardRectangle.displayName = "ForwardRectangle"
 
-export default function SpawnArea({bounds, container, entryWeight, spawnChances}){
+export default function SpawnArea({bounds, container, entryWeight, i, spawnChances}){
 
     const getColorForSpawnProbability = (probability) => {
         if (probability > 0.75) return '#00FF00';
@@ -20,6 +20,9 @@ export default function SpawnArea({bounds, container, entryWeight, spawnChances}
     };
 
     const [opened, setOpened] = useState(false);
+    const [clickedIndex, setClickedIndex] = useState(null);
+
+    console.log(clickedIndex, i)
 
     return (
         <Rectangle
@@ -27,10 +30,13 @@ export default function SpawnArea({bounds, container, entryWeight, spawnChances}
             pathOptions={{
                 fillColor: getColorForSpawnProbability(entryWeight),
                 fillOpacity: 0.4,
-                weight: 3,
+                weight: clickedIndex === i ? 0 : 3,
                 color: getColorForSpawnProbability(entryWeight)
             }}
-            eventHandlers={{click: () => setOpened(true)}}
+            eventHandlers={{click: () => {
+                setOpened(true);
+                setClickedIndex(i);
+            }}}
         >
             <Tooltip direction="bottom" className="ark-tooltip" offset={[0, 10]}>
                 <span>{container}</span>

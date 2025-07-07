@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from "react"
 import Select from 'react-select'
 
 import GameData from "@/data/mapdata.json"
-import { IconAdjustments } from "@tabler/icons-react"
+import { IconAdjustments, IconCaretDown, IconCaretDownFilled } from "@tabler/icons-react"
 import dynamic from "next/dynamic"
 
 const LazyMap = dynamic(() => import("@/components/Map"), {
@@ -74,11 +74,11 @@ export default function AllTheMaps(){
                                 color: "#8FBDCD"
                             })
                         }}
-                        components={{ IndicatorSeparator: () => null }}
+                        components={{ IndicatorSeparator: () => null, DropdownIndicator: () => <IconCaretDownFilled color="#8FBDCD"/> }}
                     />
-                    <div className="flex-1 opacity-90 flex flex-col items-center lg:flex-row">
-                        <div className="w-[97.5%] aspect-square">
-                            <LazyMap map={"The Center"} currentDino={selectedDino.label}/>
+                    <div className="flex-1 w-[95%] opacity-90 flex flex-col items-center lg:flex-row">
+                        <div className="w-full aspect-square">
+                            <LazyMap map={map.label} currentDino={selectedDino.label}/>
                         </div>
                         <div className="flex flex-row w-full justify-around my-2.5">
                             <button

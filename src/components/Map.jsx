@@ -81,7 +81,7 @@ export default function Map({map, currentDino = "Lightning Wyvern", mapWidth = n
             <SetViewToBounds bounds={bounds}/>
             {(data["dino-spawns"][currentDino] || []).map((spawnContainer, cIndex) => (
                 data["spawn-containers"][spawnContainer]["bounds"].map((bound, bIndex) => {
-                    return <SpawnArea key={`Bound${cIndex}${bIndex}`} bounds={normalizeBound(bound, bounds[1][0])} container={spawnContainer} entryWeight={data["spawn-containers"][spawnContainer]["entries"][currentDino]["entry-weight"]}/>
+                    return <SpawnArea key={`Bound${cIndex}${bIndex}`} i={bIndex} bounds={normalizeBound(bound, bounds[1][0])} container={spawnContainer} entryWeight={data["spawn-containers"][spawnContainer]["entries"][currentDino]["entry-weight"]}/>
                 })
             ))}
         </MapContainer>
