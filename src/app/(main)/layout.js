@@ -12,9 +12,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+
 export const metadata = {
-  title: "Joe Paton",
-  description: "Joe Paton personal website",
+  title: "Joe Paton: Software Developer",
+  description: "Passionate software engineer with 9+ years programming experience. View portfolio, ",
 };
 
 export default function RootLayout({ children }) {

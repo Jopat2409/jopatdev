@@ -1,8 +1,8 @@
 import "@/app/globals.css";
 
 export const metadata = {
-  title: "AllTheMaps",
-  description: "AllTheMaps spawn map",
+  title: "AllTheMaps Spawn Locations",
+  description: "AllTheMaps interactive spawn map for creatures and resources",
 };
 import { Anton } from "next/font/google";
 
