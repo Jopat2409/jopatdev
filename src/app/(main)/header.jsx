@@ -13,9 +13,9 @@ export default function Header(){
     const pathname = usePathname()
 
     return (
-        <div className={"w-full h-[10%] flex flex-row items-center justify-between px-100 " + anton.className}>
+        <div className={"w-full h-[10%] flex flex-row items-end justify-between px-100 py-2 " + anton.className}>
             {SECTIONS.map((s) => {
-                return <Link key={s} href={s} className={"hover:cursor-pointer text-4xl " + (("/" + s) == pathname ? `text-[#69B765]` : "text-white hidden sm:block")}>{s.toUpperCase()}</Link>
+                return <Link key={s} href={s} className={"hover:cursor-pointer " + (("/" + s) == pathname ? `text-[#69B765] text-5xl` : "text-white hidden sm:block text-4xl")}>{s.toUpperCase()}</Link>
             })}
         </div>
     )
