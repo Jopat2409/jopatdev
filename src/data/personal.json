@@ -32,7 +32,8 @@
             "long1": "",
             "long2": "",
             "links": {
-
+                "github": "https://github.com/A21-Software/VLRScraper",
+                "PyPi": "https://pypi.org/project/vlrscraper/"
             }
         },
         {

@@ -1,14 +1,16 @@
-import { IconBrandGithub, IconBrandSteam, IconQuestionMark, IconWorld } from "@tabler/icons-react"
+import { IconBrandGithub, IconBrandPython, IconBrandSteam, IconQuestionMark, IconWorld } from "@tabler/icons-react"
 
 
 function icon(type) {
-    switch(type){
+    switch(type.toLowerCase()){
     case "steam":
         return IconBrandSteam
     case "website":
         return IconWorld
     case "github":
         return IconBrandGithub
+    case "pypi":
+        return IconBrandPython
     default:
         return IconQuestionMark
     }
