@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Joe Paton: Software Developer",
-  description: "Passionate software engineer with 9+ years programming experience. View portfolio, ",
+  description: "Passionate software engineer with 9+ years programming experience. View portfolio, achievements and contact info",
 };
 
 export default function RootLayout({ children }) {
