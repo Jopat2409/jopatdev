@@ -1,6 +1,8 @@
 export default function About(){
 
     return (
-        <h1>Hi</h1>
+        <div className="text-white">
+            This worked
+        </div>
     )
 }
