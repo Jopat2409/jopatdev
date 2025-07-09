@@ -30,14 +30,20 @@
             "description": "Open-source python package for scraping data from vlr.gg",
             "short": "",
             "long1": "",
-            "long2": ""
+            "long2": "",
+            "links": {
+
+            }
         },
         {
             "name": "Vulkan Game Engine",
             "description": "Game engine from scratch using the Vulkan API",
             "short": "",
             "long1": "",
-            "long2": ""
+            "long2": "",
+            "links": {
+
+            }
         }
     ]
 }

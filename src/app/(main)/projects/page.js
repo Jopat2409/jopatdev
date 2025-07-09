@@ -22,7 +22,7 @@ export default function Projects(){
                             <h3 className="text-md overflow-hidden w-fit h-fit opacity-45">{currentProject.description}</h3>
                         </div>
                         <div className="w-[15%] max-w-[100px] bg-[#313131] border-[#6D6D6D] border-1 rounded-sm m-1 h-full text-white p-1 flex flex-col">
-                            {Object.keys(currentProject.links).map((l) => <LinkIcon type={l} src={currentProject.links[l]}/>)}
+                            {Object.keys(currentProject.links).map((l) => <LinkIcon key={l} type={l} src={currentProject.links[l]}/>)}
                         </div>
                     </div>
                     <div className="grow flex flex-row flex-wrap sm:flex-nowrap justify-around">

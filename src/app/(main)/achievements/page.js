@@ -1,6 +1,8 @@
 export default function About(){
 
     return (
-        <h1>Hi</h1>
+        <div className="text-white p-10">
+            Many things will be detailed when I get round to it :D
+        </div>
     )
 }
