@@ -1,0 +1,43 @@
+{
+    "projects": [
+        {
+            "name": "AllTheMaps",
+            "description": "Mod development for ARK: Survival Evolved",
+            "short": "",
+            "long1": "Initially developing the mod as a useful addon for a private server among friends, I realised that if we needed it, it was likely that others would too. And so, with a little bit of polish, I published the mod on steam, and within a month I had over 2000 unique users. Almost a year later and the mod has grown to have over 12,000 unique users and in this time, I have maintained active development, responding to user feedback on the steam community page and implementing requested features, in addition to quickly patching any bugs reported by users.",
+            "long2": "The mods are built using Studio Wildcard's modified Unreal Engine 5 build, and are built to be as configurable as possible. An additional website was developed using next.js (which is hosted on this site at jopat2409.dev/atm) which was designed to help users of the mod find the imported content on the map in an interactive and user-friendly way.",
+            "cover1": "atm1.png",
+            "cover2": "atm2.png",
+            "links": {
+                "website": "https://jopat2409.dev/atm",
+                "steam": "https://steamcommunity.com/sharedfiles/filedetails/?id=3324881669",
+                "github": "https://github.com/Jopat2409/jopatdev"
+            }
+        },
+        {
+            "name": "FGCS",
+            "description": "Open-source ground control station with Avis Drone Labs",
+            "short": "",
+            "long1": "",
+            "long2": "",
+            "links": {
+                "website": "https://fgcs.avisdronelabs.uk/",
+                "github": "https://github.com/Avis-Drone-Labs/FGCS"
+            }
+        },
+        {
+            "name": "VLRScraper",
+            "description": "Open-source python package for scraping data from vlr.gg",
+            "short": "",
+            "long1": "",
+            "long2": ""
+        },
+        {
+            "name": "Vulkan Game Engine",
+            "description": "Game engine from scratch using the Vulkan API",
+            "short": "",
+            "long1": "",
+            "long2": ""
+        }
+    ]
+}
