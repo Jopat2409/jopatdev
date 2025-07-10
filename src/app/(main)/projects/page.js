@@ -11,7 +11,7 @@ export default function Projects(){
 
     return (
         <div className="flex flex-grow justify-center mt-[10vh]">
-            <div className="hidden sm:flex flex-row w-full mx-2 h-full mb-2">
+        <div className="hidden sm:flex flex-row w-full mx-2 min-h-vh mb-2">
                 <div className="w-[20%] min-w-60 bg-[#262626] flex flex-col items-end justify-around text-white text-3xl fixed bott" style={{height: "calc(100% - 10%)"}}>
                     {PROJECTS.map((p, i) => <button key={p.name} onClick={() => setCurrentProject(PROJECTS[i])} className={"text-end w-full px-3 py-5 hover:bg-[#202020] hover:cursor-pointer" + (p.name == currentProject.name ? " border-l-[#59D98E] border-l-5" : "")}>{p.name}</button>)}
                 </div>
