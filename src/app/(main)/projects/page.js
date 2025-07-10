@@ -45,13 +45,14 @@ export default function Projects(){
                     </div>
                 </div>
             </div>
-            <div className="w-[95%] min-h-[85vh] bg-[#2A2A2A] flex sm:hidden flex-col items-center justify-center gap-10 py-5 text-white">
-                <h1 className={"text-6xl " + anton.className}>
+            <div className="w-[95%] min-h-[85vh] bg-[#2A2A2A] flex sm:hidden flex-col items-center justify-center gap-10 py-5 mb-2 text-white">
+                {/* <h1 className={"text-6xl " + anton.className}>
                     PROJECTS
-                </h1>
+                </h1> */}
                 <div className="flex flex-row w-full min-h-[30vh] justify-center items-center flex-wrap gap-5">
                     {PROJECTS.map((p, i) => {
                         return <ProjectCard
+                                    key={i}
                                     title={p.name}
                                     cover={p.cover1}
                                     link={p.links.github}
