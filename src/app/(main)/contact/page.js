@@ -7,7 +7,7 @@ export default function About(){
 
     return (
         <div className="text-white mt-[10vh] w-full min-h-[90vh] flex flex-col gap-10 items-center justify-center">
-            <div className="w-[95%] min-h-[80vh] bg-[#2A2A2A] flex flex-col items-center justify-center gap-10">
+            <div className="w-[95%] min-h-[85vh] bg-[#2A2A2A] flex flex-col items-center justify-center gap-10 py-5">
                 <h1 className={"text-6xl " + anton.className}>
                     CONTACT ME
                 </h1>

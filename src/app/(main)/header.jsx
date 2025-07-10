@@ -13,7 +13,7 @@ export default function Header(){
     const pathname = usePathname()
 
     return (
-        <div className={"w-full h-[10%] flex flex-row items-end justify-around py-2 fixed bg-[#1F1F1F] " + anton.className}>
+        <div className={"w-full h-[10%] hidden sm:flex flex-row items-end justify-around py-2 fixed bg-[#1F1F1F] " + anton.className}>
             {SECTIONS.map((s) => {
                 return <Link key={s} href={s} className={"hover:cursor-pointer " + (("/" + s) == pathname ? `text-[#69B765] text-5xl` : "text-white hidden sm:block text-4xl")}>{s.toUpperCase()}</Link>
             })}
