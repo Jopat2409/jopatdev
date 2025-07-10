@@ -8,7 +8,7 @@ export default function About(){
     return (
         <div className="text-white mt-[10vh] w-full min-h-[90vh] flex flex-col gap-10 items-center justify-center">
             <div className="w-[95%] min-h-[85vh] bg-[#2A2A2A] flex flex-col items-center justify-center gap-10 py-5">
-                <h1 className={"text-6xl hidden sm:block" + anton.className}>
+                <h1 className={"text-6xl hidden sm:block " + anton.className}>
                     CONTACT ME
                 </h1>
                 <div className="flex flex-row w-full min-h-[30vh] justify-center items-center flex-wrap gap-10">
