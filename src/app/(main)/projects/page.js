@@ -16,10 +16,10 @@ export default function Projects(){
     return (
         <div className="flex justify-center mt-[10vh] min-h-[90vh] w-full flex-col items-center">
             <div className="hidden sm:flex flex-row w-[95%] mx-2 min-h-[85vh] mb-2 overflow-y-auto">
-                <div className="w-[20%] min-w-60 bg-[#262626] flex flex-col items-end justify-around text-white text-3xl fixed " style={{minHeight: "85vh"}}>
+                <div className={"w-[20%] min-w-60 bg-[#262626] flex flex-col items-end gap-5 text-white text-3xl fixed " + anton.className} style={{minHeight: "85vh"}}>
                     {PROJECTS.map((p, i) => <button key={p.name} onClick={() => setCurrentProject(PROJECTS[i])} className={"text-end w-full px-3 py-5 hover:bg-[#202020] hover:cursor-pointer" + (p.name == currentProject.name ? " border-l-[#59D98E] border-l-5" : "")}>{p.name}</button>)}
                 </div>
-                <div className="flex w-[80%] bg-[#2a2a2a] flex-col flex-wrap p-5 min gap-1 min-h-[85vh]" style={{ marginLeft: `max(calc(var(--spacing) * 60), 20%)`}}>
+                <div className="flex w-[80%] bg-[#2a2a2a] flex-col flex-wrap p-5 min gap-1 min-h-[85vh]" style={{ marginLeft: `max(calc(var(--spacing) * 60), 20vw)`}}>
                     <div className="flex flex-row min-h-[12.5%] w-full items-end gap-1">
                         <div className="h-full grow bg-[#313131] border-[#6D6D6D] border-1 rounded-sm truncate p-3 flex flex-col items-center justify-end text-white">
                             <h1 className="text-4xl overflow-hidden w-fit h-fit">{currentProject.name}</h1>

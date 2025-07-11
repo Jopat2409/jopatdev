@@ -1,4 +1,11 @@
 {
+    "about":
+    {
+        "name": "Joe Paton",
+        "field": "Software Engineer",
+        "degree": "Bsc Computer Science, First Class",
+        "description": "Passionate Computer science graduate with over 9 years experience programming both personal projects and open-source software. Graduated from the University of Sheffield in 2025 with a 1st class Bachelor's degree"
+    },
     "projects": [
         {
             "name": "AllTheMaps",
@@ -12,20 +19,22 @@
                 "website": "https://jopat2409.dev/atm",
                 "steam": "https://steamcommunity.com/sharedfiles/filedetails/?id=3324881669",
                 "github": "https://github.com/Jopat2409/jopatdev"
-            }
+            },
+            "tags": ["C++", "Unreal Engine", "JS", "NextJS", "React", "Game Dev"]
         },
         {
             "name": "FGCS",
             "description": "Open-source ground control station with Avis Drone Labs",
             "short": "Worked with Avis Drone Labs to build their open-source GCS using a mixture of electron+next for the frontend and python for the backend",
-            "long1": "",
-            "long2": "",
+            "long1": "Worked with Avis Drone Labs in the missions team building and maintaining our open-source ground control system FGCS. Helped develop the software from the ground up using NextJS+Electron for the frontend desktop app and Flask for the backend. Helped engineer our CI/CD framework, particularly working with pytest and our automated testing to achieve a 95% coverage on our backend code.",
+            "long2": "FGCS is used by all of out sub-teams",
             "cover1": "fgcs1.png",
             "cover2": "fgcs2.png",
             "links": {
                 "website": "https://fgcs.avisdronelabs.uk/",
                 "github": "https://github.com/Avis-Drone-Labs/FGCS"
-            }
+            },
+            "tags": ["NextJS", "React", "Electron", "Docker", "Python", "CI/CD"]
         },
         {
             "name": "VLRScraper",
@@ -37,7 +46,8 @@
             "links": {
                 "github": "https://github.com/A21-Software/VLRScraper",
                 "PyPi": "https://pypi.org/project/vlrscraper/"
-            }
+            },
+            "tags": ["Python", "Requests", "Packaging", "CI/CD"]
         },
         {
             "name": "Vulkan Game Engine",
@@ -45,9 +55,58 @@
             "short": "Created a basic game engine from the ground up using Vulkan, focusing on implementing and understanding low-level concepts",
             "long1": "",
             "long2": "",
+            "cover1": "vk1.png",
+            "cover2": "",
             "links": {
 
+            },
+            "tags": ["c++", "vulkan", "game-dev"]
+        },
+        {
+            "name": "Jopat.dev",
+            "description": "Portfolio website developed from scratch with NextJS",
+            "short": "Developed from scratch using minimal libraries - deployed the dockerized application on a VPS using nginx",
+            "long1": "",
+            "long2": "",
+            "links" : {
+                "website": "https://jopat2409.dev",
+                "github": "https://github.com/Jopat2409/jopatdev"
             }
+        }
+    ],
+    "achievements": [
+        {
+            "event": "ShefJamX",
+            "achievement": "Best overall game",
+            "description": "Won best overall game at the largest game jam in Sheffield with our pygame-based multiplayer game Os!Remove",
+            "year": 2024,
+            "links": {
+                "GitHub": "https://github.com/shefjamx/os-remove"
+            }
+        },
+        {
+            "event": "ShefJam9",
+            "achievement": "Best overall game",
+            "description": "Won best overall game at the largest game jam in Sheffield with our pygame-based multiplayer game Five Nights in Newcastle",
+            "year": 2023,
+            "links": {
+                "GitHub": "https://github.com/shefjam9/Five-Nights-In-Newcastle"
+            }
+        },
+        {
+            "event": "BEBRAS CompSci Competition",
+            "achievement": "53rd in the country",
+            "description": "Achieved the highest score in North Yorkshire in the first round, placing me in the national finals held at Oxford University. Competed in the national finals achieving 53rd place out of over 400,000 competitors.",
+            "year": 2018,
+            "links": {
+                "BEBRAS UK Website": "https://www.bebras.uk/"
+            }
+        },
+        {
+            "event": "UKMT Mathematics Olympiad",
+            "achievement": "Made it to the national finals held in London",
+            "description": "Won the regional finals of the UKMT Team Olympiad and subsequently attended the national finals in London",
+            "year": 2018
         }
     ]
 }
