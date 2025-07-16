@@ -1,0 +1,65 @@
+{
+    "Summary": "Computer Science graduate from the University of Sheffield with 9 years of programming experience across personal, academic, and open-source projects. Most recently worked with Avis Drone Labs on their custom ground control system FGCS, focusing on the system architecture and integration tests",
+    "Contacts": ["joantpat@gmail.com", "jopat2409.dev", "github.com/jopat2409", "linkedin.com/in/jopat2409"],
+    "Education": {
+        "University of Sheffield" : {
+            "what": "BSc in Computer Science",
+            "location": "Sheffield",
+            "from": "September 2022",
+            "to": "June 2025",
+            "points": [
+                "Graduated with First Class Honours, ranked in the top 5% of the cohort",
+                "Awarded a distinction for my dissertation, applying transformer-based models to NER",
+                "Winner of \"Best Overall Game\" at two consecutive university-hosted game jams"
+            ]
+        },
+        "All Saints 6th Form": {
+            "what": "A-Levels",
+            "location": "York",
+            "from": "September 2020",
+            "to": "July 2022",
+            "points": [
+                "Achieved A*s in Mathematics, Further Mathematics, and Computer Science",
+                "Placed in the top 50 nationally in the BEBRAS Computational Thinking Challenge (2017)",
+                "National finalist in the UK Mathematics Trust Olympiad (2018)"
+            ]
+        }
+    },
+    "Experience": {
+        "Avis Drone Labs": {
+            "from": "September 2023",
+            "points": [
+                "Contributed to the design and development of FGCS, a mission-critical, cross-platform ground control system built using Electron, Next.js, and Flask, serving over 6 engineering teams across Avis Drone Labs",
+                "Led the design and implementation of a robust CI/CD pipeline using GitHub Actions and Docker, enabling automated testing, linting, and deployment of our Flask backend",
+                "Developed and maintained comprehensive unit tests for the backend, significantly improving system reliability and bringing test coverage up from 20% to 90%"
+            ],
+            "title": "Missions Engineer",
+            "to": null
+        },
+        "City of York Council": {
+            "from": "March 2018",
+            "points": [
+                "Shadowed senior IT personnel across multiple departments, gaining exposure to enterprise-level infrastructure, cybersecurity, and operations within a public sector",
+                "Observed best practices in server administration, desktop lifecycle management, and network security protocols"
+            ],
+            "title": "Digital City Intern",
+            "to": "March 2018"
+        }
+    },
+    "Skills": {
+        "Languages": ["Python", "C++", "C", "Java", "JavaScript", "TypeScript", "Ruby", "Haskell"],
+        "Libraries": ["PyTorch", "NumPy", "Pandas", "OpenCV", "Transformers", "Datasets"],
+        "DevOps & Testing": ["Git", "GitHub", "GitHub Actions", "Jenkins", "pytest", "Docker"],
+        "Web Technologies": ["React", "Next.js", "HTML", "CSS", "Node", "SQL", "PostgreSQL", "Electron"]
+    },
+    "Projects": {
+        "ARK Modding": "Developed and maintained UE5-based game mods for ARK: Survival Evolved, published on Steam with 13k+ users and built iteratively with community feedback and live updates",
+        "Vulkan Game Engine": "Developed a minimal game engine using the Vulkan SDK, focusing on memory management and low-level rendering pipeline design to deepen systems-level expertise",
+        "Portfolio": "Designed and deployed a personal portfolio website using Next.js, Docker, and NGINX; implemented CI/CD pipelines for automated testing and deployment to a self-managed VPS"
+    },
+    "OtherProjects": {
+        "LLM-NER": "Built an open-source NER system using LLMs, outperforming previous LLM baselines and demonstrating viable future directions in LLM fine-tuning",
+        "VlrScraper": "Created and published vlrscraper, a Python package for extracting structured data from VLR.gg using requests; available open-source on GitHub and PyPi with ongoing improvements.",
+        "BLE MIDI Controller": "Built an embedded MIDI controller for Roland pianos using ESP32 (Unphone) with BLE communication, SD card support, and real-time playback/recording of MIDI files on-device."
+    }
+}
